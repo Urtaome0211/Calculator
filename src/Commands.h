@@ -1,0 +1,67 @@
+#pragma once
+// ============================================================
+// 全局命令 ID 表：所有面板、按钮共用同一套 ID，集中管理
+// 按钮被点击时通过 WM_COMMAND 把对应 ID 发给父窗口
+// ============================================================
+enum Commands {
+  // ---------- 导航 ----------
+  ID_NAV_STANDARD = 1001,
+  ID_NAV_SCIENTIFIC,
+  ID_NAV_GRAPHING,
+  ID_NAV_PROGRAMMER,
+  ID_NAV_DATE,
+  ID_NAV_CONVERTER,          // 转换器（默认类别：长度）
+  ID_NAV_CONV_CURRENCY,      // 以下为各转换类别
+  ID_NAV_CONV_VOLUME,
+  ID_NAV_CONV_LENGTH,
+  ID_NAV_CONV_WEIGHT,
+  ID_NAV_CONV_TEMP,
+  ID_NAV_CONV_AREA,
+  ID_NAV_CONV_SPEED,
+  ID_NAV_CONV_TIME,
+  ID_NAV_CONV_ENERGY,
+  ID_NAV_CONV_PRESSURE,
+  ID_NAV_CONV_POWER,
+  ID_NAV_CONV_ANGLE,
+  ID_NAV_CONV_DATA,
+  ID_NAV_CONV_FREQ,
+
+  ID_THEME_TOGGLE = 1100,
+  ID_HISTORY_TOGGLE,
+  ID_HISTORY_CLEAR,
+  ID_HISTORY_DELETE,
+
+  // ---------- 数字与基础运算 ----------
+  IDK_0 = 2000, IDK_1, IDK_2, IDK_3, IDK_4, IDK_5, IDK_6, IDK_7, IDK_8, IDK_9,
+  IDK_DOT, IDK_ADD, IDK_SUB, IDK_MUL, IDK_DIV, IDK_EQU,
+  IDK_CLEAR, IDK_CE, IDK_BACK, IDK_PERCENT, IDK_SIGN,
+  IDK_RECIP, IDK_SQ, IDK_SQRT,
+  IDK_MC, IDK_MR, IDK_MP, IDK_MM, IDK_MS,
+
+  // ---------- 科学模式 ----------
+  IDK_SC_2ND = 2100, IDK_SC_PI, IDK_SC_E, IDK_SC_FACT, IDK_SC_POW,
+  IDK_SC_POW10, IDK_SC_LOG, IDK_SC_LN, IDK_SC_SIN, IDK_SC_COS, IDK_SC_TAN,
+  IDK_SC_ABS, IDK_SC_MOD, IDK_SC_LPAR, IDK_SC_RPAR,
+  IDK_SC_ROOTY, IDK_SC_LOGB, IDK_SC_EPOW, IDK_SC_2POW, IDK_SC_RAND,
+  IDK_SC_DEG, IDK_SC_RAD, IDK_SC_GRAD,
+
+  // ---------- 程序员模式 ----------
+  IDK_PR_BASE_HEX = 2200, IDK_PR_BASE_DEC, IDK_PR_BASE_OCT, IDK_PR_BASE_BIN,
+  IDK_PR_WS_QWORD, IDK_PR_WS_DWORD, IDK_PR_WS_WORD, IDK_PR_WS_BYTE,
+  IDK_PR_A, IDK_PR_B, IDK_PR_C, IDK_PR_D, IDK_PR_E, IDK_PR_F,
+  IDK_PR_LSH, IDK_PR_RSH, IDK_PR_AND, IDK_PR_OR, IDK_PR_XOR, IDK_PR_NOT, IDK_PR_MOD,
+  IDK_PR_LPAR, IDK_PR_RPAR, IDK_PR_NAND,
+
+  // ---------- 日期计算 ----------
+  IDK_DT_MODE_DIFF = 2300, IDK_DT_MODE_ADD, IDK_DT_CALC, IDK_DT_RESET,
+  IDK_DT_COMBO_UNIT,
+
+  // ---------- 单位转换器 ----------
+  IDK_CV_COMBO_CAT = 2400, IDK_CV_COMBO_FROM, IDK_CV_COMBO_TO,
+  IDK_CV_EDIT_FROM, IDK_CV_EDIT_TO, IDK_CV_SWAP,
+
+  // ---------- 图形模式 ----------
+  IDK_GR_PLOT = 2500, IDK_GR_RESET,
+  IDK_GR_TOG1, IDK_GR_TOG2, IDK_GR_TOG3,
+  IDK_GR_EDIT1, IDK_GR_EDIT2, IDK_GR_EDIT3,
+};
